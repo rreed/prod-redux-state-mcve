@@ -1,0 +1,43 @@
+{
+    "name": "redux-mcve",
+    "version": "0.0.1",
+    "description": "wat",
+    "scripts": {
+        "artifact": "./node_modules/.bin/electron-builder",
+        "compile": "./node_modules/.bin/electron-webpack",
+        "dev": "./node_modules/.bin/electron-webpack dev",
+        "dist": "npm run compile && npm run artifact",
+        "install": "electron-rebuild"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.3.3",
+        "@babel/register": "^7.4.0",
+        "@types/react": "^16.8.7",
+        "@types/react-dom": "^16.8.2",
+        "@types/react-redux": "^7.0.5",
+        "electron": "3.0.7",
+        "electron-builder": "^20.40.2",
+        "electron-rebuild": "^1.8.4",
+        "electron-webpack": "^2.6.2",
+        "electron-webpack-ts": "^3.1.1",
+        "ts-node": "^8.0.3",
+        "typescript": "^3.3.3333",
+        "webpack": "^4.29.6"
+    },
+    "dependencies": {
+        "@blueprintjs/core": "^3.14.1",
+        "@blueprintjs/table": "^3.4.1",
+        "@types/electron-settings": "^3.1.1",
+        "@types/mocha": "^5.2.5",
+        "electron-debug": "^3.0.0",
+        "electron-react-devtools": "^0.5.3",
+        "es6-promise": "^4.2.6",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4",
+        "react-redux": "^6.0.1",
+        "redux": "^4.0.1",
+        "source-map-support": "^0.5.12"
+    }
+}
