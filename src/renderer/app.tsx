@@ -2,11 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { languageChange } from './redux/actions';
 
-import Store from './redux/store';
-
-interface AppProps {
-    lng: string
-}
+type DispatchProps = typeof mapDispatchToProps;
+type AppProps = DispatchProps & {lng : string}
 
 interface AppState {
 
@@ -19,11 +16,11 @@ export class App extends React.Component<AppProps, AppState> {
     }
 
     private makeItEnglish = () => {
-        Store.dispatch(languageChange("en"));
+        this.props.languageChange("en");
     }
 
     private makeItNotEnglish = () => {
-        Store.dispatch(languageChange("not-en"));
+        this.props.languageChange("not-en");
     }
 
     render() {
@@ -44,9 +41,8 @@ export class App extends React.Component<AppProps, AppState> {
 }
 
 const mapStateToProps = (state:any) => {
-    console.log(state);
     return {
-        lng: state["languageChange"]["lng"]
+        lng: state.languageChange.lng
     };
 };
 
